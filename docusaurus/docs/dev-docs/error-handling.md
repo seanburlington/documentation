@@ -229,7 +229,7 @@ module.exports = {
 
     // Throwing an error will prevent the entity from being created
     if (!okay) {
-      throw new ApplicationError('Something went wrong', { foo: 'bar' });
+      throw new ApplicationError('Error displayed in flash message', {"errors": [{"path": ["myfield"], "message": "error displayed under field", "name": "ValidationError"} ] } );
     }
   },
 };
@@ -251,7 +251,7 @@ export default {
 
     // Throwing an error will prevent the entity from being created
     if (!okay) {
-      throw new ApplicationError('Something went wrong', { foo: 'bar' });
+      throw new ApplicationError('Error displayed in flash message', {"errors": [{"path": ["myfield"], "message": "error displayed under field", "name": "ValidationError"} ] } );
     }
   },
 };
